@@ -7,5 +7,11 @@ for d in */ ; do
       cd ..
     else
       echo "$d"
+      for dd in */ ; do
+          if [ -d "$dd/.git" ]; then
+            cd "$dd" && git push origin
+            cd ..
+          fi
+      done
     fi
 done
