@@ -6,6 +6,6 @@ for d in */ ; do
       cd "$d" && git push origin
       cd ..
     else
-      #echo "$d"
+      echo "$d"
     fi
 done
